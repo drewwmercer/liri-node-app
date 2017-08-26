@@ -46,7 +46,10 @@ function movieThis(){
     "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&r=json&tomatoes=true";
     console.log("---------------\nqueryURL variable: " + queryUrl);
     request(queryUrl, function(error, response, body) {
-
+        if (!error && response.statusCode === 200) {
+            var movieResponse = JSON.parse(body);
+            var movieOutput = 
+        }
     });
 
 }
@@ -59,7 +62,6 @@ function movieThis(){
 
 request(queryUrl, function(error, response, body) {
   // If the request is successful
-  if (!error && response.statusCode === 200) {
     // Parse the body of the site and recover just the imdbRating
     // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
     console.log("Release Year: " + JSON.parse(body).Year);
