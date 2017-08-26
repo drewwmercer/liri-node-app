@@ -61,8 +61,8 @@ function movieThis() {
         "IMDB Rating: " +
         movieResponse.imdbRating +
         "\n" +
-        "Country: " +
-        movieResponse.Country +
+        "Rotten Tomatoes Rating: " +
+        movieResponse.tomatoRating +
         "\n" +
         "Language: " +
         movieResponse.Language +
@@ -73,8 +73,8 @@ function movieThis() {
         "Actors: " +
         movieResponse.Actors +
         "\n" +
-        "Rotten Tomatoes Rating: " +
-        movieResponse.tomatoRating +
+        "Country: " +
+        movieResponse.Country +
         "\n" +
         "------------------------------ Movie Output End ------------------------------" +
         "\n";
