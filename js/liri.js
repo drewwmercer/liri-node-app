@@ -38,21 +38,21 @@ switch (liriOption) {
 }
 
 function movieThis() {
-  if (!searchTerm) {
+    var searchTerm = process.argv[3];
+    if (!searchTerm) {
     searchTerm = "Mr. Nobody";
   }
   var queryUrl =
     "http://www.omdbapi.com/?t=" +
     searchTerm +
-    "&y=&plot=short&r=json&tomatoes=true";
+    "&y=&plot=short&r=json&tomatoes=true&apikey=40e9cece";
   console.log("---------------\nqueryURL variable: " + queryUrl);
   request(queryUrl, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       var movieResponse = JSON.parse(body);
       var movieOutput =
         "------------------------------ Movie Output Start ------------------------------" +
-        "\n";
-      "Title: " +
+        "\nTitle: " +
         movieResponse.Title +
         "\n" +
         "Year: " +
@@ -82,7 +82,7 @@ function movieThis() {
         "------------------------------ Movie Output End ------------------------------" +
         "\n";
       console.log(movieOutput);
-      logOut(movieOutput);
+      //logOut(movieOutput);
     }
   });
 }
