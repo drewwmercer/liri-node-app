@@ -58,7 +58,7 @@ function movieThis() {
         "Release Year: " +
         movieResponse.Year +
         "\n" +
-        "Imdb Rating: " +
+        "IMDB Rating: " +
         movieResponse.imdbRating +
         "\n" +
         "Country: " +
@@ -75,9 +75,6 @@ function movieThis() {
         "\n" +
         "Rotten Tomatoes Rating: " +
         movieResponse.tomatoRating +
-        "\n" +
-        "Rotten Tomatoes URL: " +
-        movieResponse.tomatoURL +
         "\n" +
         "------------------------------ Movie Output End ------------------------------" +
         "\n";
