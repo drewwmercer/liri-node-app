@@ -55,7 +55,7 @@ function movieThis() {
         "\nMovie Title: " +
         movieResponse.Title +
         "\n" +
-        "Year: " +
+        "Release Year: " +
         movieResponse.Year +
         "\n" +
         "Imdb Rating: " +
