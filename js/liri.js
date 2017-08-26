@@ -45,7 +45,7 @@ function movieThis() {
   var queryUrl =
     "http://www.omdbapi.com/?t=" +
     searchTerm +
-    "&y=&plot=short&r=json&tomatoes=true&apikey=40e9cece";
+    "&y=&plot=short&tomatoes=true&r=json&apikey=40e9cece";
   console.log("---------------\nqueryURL variable: " + queryUrl);
   request(queryUrl, function(error, response, body) {
     if (!error && response.statusCode === 200) {
@@ -60,10 +60,10 @@ function movieThis() {
         movieResponse.Year +
         "\n" +
         "IMDB Rating: " +
-        movieResponse.imdbRating +
+        movieResponse.Ratings[0].Value +
         "\n" +
         "Rotten Tomatoes Rating: " +
-        movieResponse.tomatoRating +
+        movieResponse.Ratings[1].Value +
         "\n" +
         "Country: " +
         movieResponse.Country +
