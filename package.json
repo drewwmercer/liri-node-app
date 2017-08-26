@@ -1,0 +1,27 @@
+{
+  "name": "liri-node-app",
+  "version": "0.1.1",
+  "description": "liri-node-app package",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewwmercer/liri-node-app.git"
+  },
+  "keywords": [
+    "liri"
+  ],
+  "author": "Drew Mercer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewwmercer/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/drewwmercer/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}
