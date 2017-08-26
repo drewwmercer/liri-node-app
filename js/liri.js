@@ -37,12 +37,25 @@ switch (liriOption) {
   //"Be sure to put the movie or song name in quotation marks if it's more than one word.");
 }
 
+
+function movieThis(){
+    if(!movie){
+        movie = "Mr. Nobody";
+    }
+    var queryUrl =
+    "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&r=json&tomatoes=true";
+    console.log("---------------\nqueryURL variable: " + queryUrl);
+    request(queryUrl, function(error, response, body) {
+
+    });
+
+}
+
 // Then run a request to the OMDB API with the movie specified
-var queryUrl =
-  "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=40e9cece";
+
 
 // This line is just to help us debug against the actual URL.
-console.log(queryUrl);
+
 
 request(queryUrl, function(error, response, body) {
   // If the request is successful
