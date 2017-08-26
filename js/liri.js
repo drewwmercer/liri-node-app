@@ -37,33 +37,64 @@ switch (liriOption) {
   //"Be sure to put the movie or song name in quotation marks if it's more than one word.");
 }
 
-
-function movieThis(){
-    if(!movie){
-        movie = "Mr. Nobody";
+function movieThis() {
+  if (!searchTerm) {
+    searchTerm = "Mr. Nobody";
+  }
+  var queryUrl =
+    "http://www.omdbapi.com/?t=" +
+    searchTerm +
+    "&y=&plot=short&r=json&tomatoes=true";
+  console.log("---------------\nqueryURL variable: " + queryUrl);
+  request(queryUrl, function(error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var movieResponse = JSON.parse(body);
+      var movieOutput =
+        "------------------------------ Movie Output Start ------------------------------" +
+        "\n";
+      "Title: " +
+        movieResponse.Title +
+        "\n" +
+        "Year: " +
+        movieResponse.Year +
+        "\n" +
+        "Imdb Rating: " +
+        movieResponse.imdbRating +
+        "\n" +
+        "Country: " +
+        movieResponse.Country +
+        "\n" +
+        "Language: " +
+        movieResponse.Language +
+        "\n" +
+        "Plot: " +
+        movieResponse.Plot +
+        "\n" +
+        "Actors: " +
+        movieResponse.Actors +
+        "\n" +
+        "Rotten Tomatoes Rating: " +
+        movieResponse.tomatoRating +
+        "\n" +
+        "Rotten Tomatoes URL: " +
+        movieResponse.tomatoURL +
+        "\n" +
+        "------------------------------ Movie Output End ------------------------------" +
+        "\n";
+      console.log(movieOutput);
+      logOut(movieOutput);
     }
-    var queryUrl =
-    "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&r=json&tomatoes=true";
-    console.log("---------------\nqueryURL variable: " + queryUrl);
-    request(queryUrl, function(error, response, body) {
-        if (!error && response.statusCode === 200) {
-            var movieResponse = JSON.parse(body);
-            var movieOutput = 
-        }
-    });
-
+  });
 }
 
 // Then run a request to the OMDB API with the movie specified
 
-
 // This line is just to help us debug against the actual URL.
 
-
-request(queryUrl, function(error, response, body) {
-  // If the request is successful
-    // Parse the body of the site and recover just the imdbRating
-    // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-    console.log("Release Year: " + JSON.parse(body).Year);
-  }
-});
+// request(queryUrl, function(error, response, body) {
+//   // If the request is successful
+//     // Parse the body of the site and recover just the imdbRating
+//     // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
+//     console.log("Release Year: " + JSON.parse(body).Year);
+//   }
+// });
