@@ -45,7 +45,7 @@ function movieThis() {
   var queryUrl =
     "http://www.omdbapi.com/?t=" +
     searchTerm +
-    "&y=&plot=short&apikey=40e9cece";
+    "&y=&plot=short&r=json&tomatoes=true&apikey=40e9cece";
   console.log("---------------\nqueryURL variable: " + queryUrl);
   request(queryUrl, function(error, response, body) {
     if (!error && response.statusCode === 200) {
