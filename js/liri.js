@@ -50,7 +50,6 @@ function movieThis() {
   request(queryUrl, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       var movieResponse = JSON.parse(body);
-      console.log("movieResponse: " + movieResponse);
       var movieOutput =
         "------------------------------ Movie Output Start ------------------------------" +
         "\nMovie Title: " +
