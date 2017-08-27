@@ -83,7 +83,9 @@ function movieThis() {
   });
 }
 
-function myTweets() {}
+function myTweets() {
+    var twitOption = 
+}
 
 function spotifyThisSong() {}
 
