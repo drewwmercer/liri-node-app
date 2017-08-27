@@ -91,9 +91,36 @@ function myTweets() {
     access_token_secret: keys.twitterKeys.access_token_secret
   });
   var handle = searchTerm;
-  var twitterPassHandle = "screen_name: " + handle;
-  console.log(twitterPassHandle); //testing that this is working so far
-  twitOption.get;
+  var params = {screen_name: searchTerm};
+  console.log(params); //testing that this is working so far
+  twitOption.get("statuses/user_timeline", params, function(
+    error,
+    tweets,
+    response
+  ) {
+    if (!error) {
+      tweets.forEach(function(tweet) {
+          console.log("@" + tweet.text);
+         var twitterOutput =
+        "------------------------------ Twitter Output Start ------------------------------" +
+        "\n------------------------------ Twitter Output End ------------------------------\n";
+        //   // moment(tweet.created_at).format("LLLL") + "\n" + tweet.text + "\n\n";
+        //   "@" +
+        //   data[i].user.screen_name +
+        //   ": " +
+        //   data[i].text +
+        //   "\r\n" +
+        //   data[i].created_at +
+        //   "\r\n" +
+        //   "------------------------------ " +
+        //   i +
+        //   " ------------------------------" +
+        //   "\r\n";
+        console.log(twitterOutput);
+        logOutput(twitterOutput);
+      });
+    }
+  });
 }
 
 function spotifyThisSong() {}
