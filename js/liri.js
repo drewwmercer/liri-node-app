@@ -85,6 +85,8 @@ function movieThis() {
 
 function myTweets() {}
 
+function spotifyThisSong() {}
+
 function logOutput(logResults) {
   fs.appendFile("log.txt", logResults, error => {
     if (error) {
