@@ -84,7 +84,7 @@ function movieThis() {
 }
 
 function myTweets() {
-    var twitOption = 
+    var twitOption ;
 }
 
 function spotifyThisSong() {}
