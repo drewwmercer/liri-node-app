@@ -100,15 +100,17 @@ function myTweets() {
   ) {
     if (!error) {
       tweets.forEach(function(tweet) {
-        // console.log(tweet.text);
-        var twitterOutput =
-          "------------------------------ Twitter Output Start ------------------------------" +
-          tweet.text +
-          "\n------------------------------ Twitter Output End ------------------------------\n";
+        var twitterOutput = tweet.text + "\n";
         console.log(twitterOutput);
+        logOutput(
+          "------------------------------ Twitter Output Start ------------------------------"
+        );
         logOutput(twitterOutput);
-        }
+        logOutput(
+          "\n------------------------------ Twitter Output End ------------------------------\n"
+        );
       });
+    }
   });
 }
 
