@@ -1,0 +1,30 @@
+------------------------------ Movie Output Start ------------------------------
+Movie Title: Mr. Nobody
+Release Year: 2009
+IMDB Rating: 7.9/10
+Rotten Tomatoes Rating: 64%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+------------------------------ Movie Output End ------------------------------
+------------------------------ Movie Output Start ------------------------------
+Movie Title: Ronin
+Release Year: 1998
+IMDB Rating: 7.3/10
+Rotten Tomatoes Rating: 68%
+Country: UK, France, USA
+Language: English, French, Russian
+Plot: A freelancing former U.S. intelligence agent tries to track down a mysterious package that is wanted by both the Irish and the Russians.
+Actors: Robert De Niro, Jean Reno, Natascha McElhone, Stellan Skarsgård
+------------------------------ Movie Output End ------------------------------
+------------------------------ Movie Output Start ------------------------------
+Movie Title: Predator
+Release Year: 1987
+IMDB Rating: 7.8/10
+Rotten Tomatoes Rating: 78%
+Country: USA
+Language: English, Spanish, Russian
+Plot: A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.
+Actors: Arnold Schwarzenegger, Carl Weathers, Elpidia Carrillo, Bill Duke
+------------------------------ Movie Output End ------------------------------

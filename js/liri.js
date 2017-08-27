@@ -76,12 +76,19 @@ function movieThis() {
         "Actors: " +
         movieResponse.Actors +
         "\n" +
-        "------------------------------ Movie Output End ------------------------------" +
-        "\n";
+        "------------------------------ Movie Output End ------------------------------\n";
       console.log(movieOutput);
-      //logOut(movieOutput);
+      logOutput(movieOutput);
     }
   });
 }
 
 function myTweets() {}
+
+function logOutput(logResults) {
+  fs.appendFile("log.txt", logResults, error => {
+    if (error) {
+      throw error;
+    }
+  });
+}
