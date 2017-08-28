@@ -123,7 +123,10 @@ function spotifyThisSong(searchTerm) {
   if (!searchTerm) {
     searchTerm = "The Sign ace of base";
   }
-  spotifyOption.search({ type: "track", query: searchTerm }, function(err, data) {
+  spotifyOption.search({ type: "track", query: searchTerm }, function(
+    err,
+    data
+  ) {
     if (!err) {
       var songInfo = data.tracks.items;
       for (var i = 0; i < 3; i++) {
