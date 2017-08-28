@@ -100,7 +100,7 @@ function myTweets() {
   ) {
     if (!error) {
       tweets.forEach(function(tweet) {
-        var twitterOutput = tweet.text + "\n";
+        var twitterOutput = tweet.text + "\n" + tweet.created_at + "\n";
         console.log(twitterOutput);
         logOutput(
           "------------------------------ Twitter Output Start ------------------------------"
