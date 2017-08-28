@@ -51,7 +51,7 @@ function movieThis() {
     if (!error && response.statusCode === 200) {
       var movieResponse = JSON.parse(body);
       var movieOutput =
-        "------------------------------ Movie Output Start ------------------------------" +
+        "------------------------------ OMDB Output Start ------------------------------" +
         "\nMovie Title: " +
         movieResponse.Title +
         "\n" +
@@ -76,7 +76,7 @@ function movieThis() {
         "Actors: " +
         movieResponse.Actors +
         "\n" +
-        "------------------------------ Movie Output End ------------------------------\n";
+        "------------------------------ OMDB Output End ------------------------------\n";
       console.log(movieOutput);
       logOutput(movieOutput);
     }
