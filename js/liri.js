@@ -114,7 +114,47 @@ function myTweets() {
   });
 }
 
-function spotifyThisSong() {}
+function spotifyThisSong(searchTerm) {
+  var searchTerm = process.argv[3];
+  var spotifyOption = new spotify({
+    id: keys.spotifyKeys.id,
+    secret: keys.spotifyKeys.secret
+  });
+  if (!searchTerm) {
+    searchTerm = "The Sign";
+  }
+  spotifyOption.search({ type: "track", query: searchTerm }, function(err, data) {
+    if (!err) {
+      var songInfo = data.tracks.items;
+      for (var i = 0; i < 3; i++) {
+        if (songInfo[i] != undefined) {
+          var spotifyOutput =
+            "Artist: " +
+            songInfo[i].artists[0].name +
+            "\n" +
+            "Song: " +
+            songInfo[i].name +
+            "\n" +
+            "Preview: " +
+            songInfo[i].preview_url +
+            "\n" +
+            "Album: " +
+            songInfo[i].album.name +
+            "\n" +
+            "------------------------------ " +
+            i +
+            " ------------------------------" +
+            "\n";
+          console.log(spotifyOutput);
+          logOutput(spotifyOutput);
+        }
+      }
+    } else {
+      console.log("Error :" + err);
+      return;
+    }
+  });
+}
 
 function doWhatItSays() {
   fs.readFile("random.txt", "utf8", function(error, data) {
