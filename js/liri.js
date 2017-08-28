@@ -116,6 +116,17 @@ function myTweets() {
 
 function spotifyThisSong() {}
 
+function doWhatItSays() {
+  fs.readFile("random.txt", "utf8", function(error, data) {
+    if (!error) {
+      doWhatItSaysResults = data.split(",");
+      spotifyThisSong(doWhatItSaysResults[0], doWhatItSaysResults[1]);
+    } else {
+      console.log(error);
+    }
+  });
+}
+
 function logOutput(logResults) {
   fs.appendFile("log.txt", logResults, error => {
     if (error) {
