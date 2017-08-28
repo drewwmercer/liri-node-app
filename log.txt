@@ -483,3 +483,18 @@ Song: Θ. Macarena
 Preview: null
 Album: Ipséité
 ------------------------------ 2 ------------------------------
+Artist: Ace of Base
+Song: The Sign
+Preview: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=7ce594e8e7ff420d960b8d913b487137
+Album: The Sign (US Album) [Remastered]
+------------------------------ 0 ------------------------------
+Artist: Ace of Base
+Song: All That She Wants
+Preview: https://p.scdn.co/mp3-preview/b176774bc04182501c2d5d201afda143b1193f31?cid=7ce594e8e7ff420d960b8d913b487137
+Album: The Sign (US Album) [Remastered]
+------------------------------ 1 ------------------------------
+Artist: Ace of Base
+Song: The Sign
+Preview: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=7ce594e8e7ff420d960b8d913b487137
+Album: Greatest Hits
+------------------------------ 2 ------------------------------

@@ -121,7 +121,7 @@ function spotifyThisSong(searchTerm) {
     secret: keys.spotifyKeys.secret
   });
   if (!searchTerm) {
-    searchTerm = "The Sign";
+    searchTerm = "The Sign ace of base";
   }
   spotifyOption.search({ type: "track", query: searchTerm }, function(err, data) {
     if (!err) {
